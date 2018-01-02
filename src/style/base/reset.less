@@ -14,7 +14,8 @@
 * limitations under the License.
 */
 
-@import "fn";
+@import './_size';
+
 
 html {
     -ms-text-size-adjust: 100%;
@@ -23,7 +24,6 @@ html {
 
 body {
     line-height: 1.6;
-    font-family: @weuiFontDefault;
 }
 
 * {
@@ -37,5 +37,11 @@ a img {
 
 a {
     text-decoration: none;
-    .setTapColor();
 }
+
+.div1{
+	height:@rem100;
+	width:@rem100;
+	background:blue;
+}
+
