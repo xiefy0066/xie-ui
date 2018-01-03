@@ -18,6 +18,75 @@
 
 </div>
 <script>
+
+
+(function($){
+    $.extend($.fn,{
+        xfyConfirm:function(options){
+
+            var defaut = {
+                type:'',
+                title: '',
+                cancelCallback:null,
+                sureCallback:null
+            };
+            var options = $.extend({},defaut,options);
+            return $(this).each(function(){
+                var htmlpage =`<div class="posi-panel">
+                                        <div class="xfy-box">
+                                            <div class="panel-title xfy-border-1px xfy-border-bottom">${options.title}</div>
+                                            <div class="posi-panel-btn">
+                                                <div class="cancel close">取消</div>
+                                                <div class="confirm ">确定</div>
+                                            </div>
+
+                                        </div>
+                                    </div>` ;
+                $('body').append(htmlpage);
+
+                var $posiPanel = $('.posi-panel');
+                var $btn = $posiPanel.find('.posi-panel-btn');
+
+                switch(options.type){
+                    case 'confirm':
+                        $btn.addClass('btn-flex');
+                        $btn.find('.confirm').addClass('xfy-border-1px xfy-border-left');
+                        break;
+                    case 'alert':
+                        $btn.find('.close').hide();
+                        break;
+                    case 'vertical':
+                        $btn.find('.confirm').addClass('xfy-border-1px xfy-border-top');
+
+                        break;
+
+                }
+
+                $posiPanel.show().addClass('panel-show');
+
+                $posiPanel.one('click','.close',function(){
+                    $posiPanel.removeClass('panel-show');
+                    setTimeout(function () {
+                        $posiPanel.remove();
+                        options.cancelCallback && options.cancelCallback();
+                    },200)
+                });
+
+                $posiPanel.one('click','.confirm',function(){
+                    $posiPanel.removeClass('panel-show');
+
+                    setTimeout(function () {
+                        $posiPanel.remove();
+
+                        options.sureCallback && options.sureCallback();
+
+                    },200)
+                });
+
+            });
+        }
+    })
+})(Zepto);
     $(function(){
         $('.xfy-btn').click(function(){
             var type=$(this).data('type');
@@ -36,7 +105,7 @@
                             alert('confirm确定回调');
                         }
                     });
-                    alert(type);
+                    
 
                     break;
                 case'alert':
