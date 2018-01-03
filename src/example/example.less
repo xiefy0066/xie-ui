@@ -151,8 +151,17 @@ body, .page {
         //    background-color: #ECECEC;
         //}
     }
+
+    .weui-flex {
+        display: flex;
+    }
+    .weui-flex__item{
+        flex: 1;
+    }
     .weui-cells{
         margin-top: 0;
+      padding-left: 20px;
+
         &:before, &:after{
             display: none;
         }
@@ -161,11 +170,52 @@ body, .page {
         padding-left: @pageHomePadding;
         padding-right: @pageHomePadding;
         &:before{
-            left: @pageHomePadding;
-            right: @pageHomePadding;
+          content: " ";
+          position: absolute;
+          left: 0;
+          top: 0;
+          right: 0;
+          height: 1px;
+          border-top: 1px solid #e5e5e5;
+          color: #e5e5e5;
+          -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+          -webkit-transform: scaleY(0.5);
+          transform: scaleY(0.5);
+          left: 15px;
+          z-index: 2;
         }
     }
 }
+
+.weui-cell_access {
+
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  color: inherit;
+  &:active{
+    background-color: #ECECEC;
+
+  }
+
+
+}
+.weui-cell__bd {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+.weui-cell__ft {
+  //display: inline-block;
+  //
+  //text-align: right;
+  //color: #999999;
+  //position: absolute;
+  //top: 50%;
+  //margin-top: -4px;
+  //right: 2px;
+}
+
+
 
 .page.button {
     .page__bd {
@@ -461,3 +511,19 @@ body, .page {
         padding-right:constant(safe-area-inset-right);
     }
 }
+
+  //button
+
+  .jrm-button {margin-top: 10px;}
+  .jrm-bg-color-02d397 {
+    background-color: #02d397;
+  }
+  .jrm-bg-color-508cee {
+    background-color: #508cee;
+  }
+  .jrm-color-fff {
+    color: #fff;
+  }
+
+
+//confirm  xfy-base

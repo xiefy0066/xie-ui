@@ -16,9 +16,10 @@
 <div class="page">
     <div class="page__hd">
         <h1 class="page__title">
-            <img src="./images/logo.png" alt="WeUI" height="21px" />
+            <!--<img src="./images/logo.png" alt="WeUI" height="21px" />-->
+            <p style="height: 21px; font-size: 24px; color: #666666;">XieUI</p>
         </h1>
-        <p class="page__desc">WeUI 是一套同微信原生视觉体验一致的基础样式库，由微信官方设计团队为微信内网页和微信小程序量身设计，令用户的使用感知更加统一。</p>
+        <p class="page__desc">XieUI 是一套归纳总结出来的基础样式库，根据工作场景设计出来，使开发更快速高效美观，增加用户的体验舒适度。</p>
     </div>
     <div class="page__bd page__bd_spacing">
         <ul>
@@ -29,17 +30,20 @@
                 </div>
                 <div class="page__category js_categoryInner">
                     <div class="weui-cells page__category-content">
-                        <a class="weui-cell weui-cell_access js_item" data-id="button" href="javascript:;">
-                            <div class="weui-cell__bd">
+                        <a class="weui-cell weui-cell_access js_item " data-id="button" href="javascript:;">
+                            <div class="weui-cell__bd ">
                                 <p>Button</p>
                             </div>
-                            <div class="weui-cell__ft"></div>
                         </a>
-                        <a class="weui-cell weui-cell_access js_item" data-id="button" href="javascript:;">
+                        <a class="weui-cell weui-cell_access js_item" data-id="confirm" href="javascript:;">
                             <div class="weui-cell__bd">
-                                <p>Button</p>
+                                <p>confirm</p>
                             </div>
-                            <div class="weui-cell__ft"></div>
+                        </a>
+                        <a class="weui-cell weui-cell_access js_item" data-id="tab" href="javascript:;">
+                            <div class="weui-cell__bd">
+                                <p>tab</p>
+                            </div>
                         </a>
                         
                     </div>
@@ -47,7 +51,7 @@
             </li>
             <li>
                 <div class="weui-flex js_item" data-id="layers">
-                    <p class="weui-flex__item">层级规范</p>
+                    <p class="weui-flex__item">规范</p>
                     <img src="./images/icon_nav_z-index.png" alt="">
                 </div>
             </li>
@@ -108,35 +112,227 @@
         <p class="page__desc">按钮</p>
     </div>
     <div class="page__bd page__bd_spacing">
-
-        <div class="div1"></div>
-        <a href="javascript:;" class="weui-btn weui-btn_primary">页面主操作 Normal</a>
-		<a href="javascript:;" class="weui-btn weui-btn_primary weui-btn_loading"><i class="weui-loading"></i>页面主操作 Loading</a>
-        <a href="javascript:;" class="weui-btn weui-btn_disabled weui-btn_primary">页面主操作 Disabled</a>
-        <a href="javascript:;" class="weui-btn weui-btn_default">页面次要操作 Normal</a>
-		<a href="javascript:;" class="weui-btn weui-btn_default weui-btn_loading"><i class="weui-loading"></i>页面次操作 Loading</a>
-        <a href="javascript:;" class="weui-btn weui-btn_disabled weui-btn_default">页面次要操作 Disabled</a>
-        <a href="javascript:;" class="weui-btn weui-btn_warn">警告类操作 Normal</a>
-		<a href="javascript:;" class="weui-btn weui-btn_warn weui-btn_loading"><i class="weui-loading"></i>警告类操作 Loading</a>
-        <a href="javascript:;" class="weui-btn weui-btn_disabled weui-btn_warn">警告类操作 Disabled</a>
-        
-        <div class="button-sp-area">
-            <a href="javascript:;" class="weui-btn weui-btn_plain-default">按钮</a>
-            <a href="javascript:;" class="weui-btn weui-btn_plain-default weui-btn_plain-disabled">按钮</a>
-            <a href="javascript:;" class="weui-btn weui-btn_plain-primary">按钮</a>
-            <a href="javascript:;" class="weui-btn weui-btn_plain-primary weui-btn_plain-disabled">按钮</a>
-            <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_primary">按钮</a>
-            <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">按钮</a>
-            <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_warn">按钮</a>
+        <div class="jrm-button jrm-button-one">一级常态按钮</div>
+        <div class="jrm-button jrm-button-two jrm-border-all jrm-border-1px">二级常态按钮</div>
+        <div class="jrm-button jrm-button-three jrm-border-all jrm-border-1px">三级常态按钮</div>
+        <div class="jrm-button jrm-button-three jrm-border-all jrm-border-1px">
+            <i class="xfy-button-loading"></i>
+            Loading
         </div>
+        <div class="jrm-button jrm-button-three jrm-disable">不可点击按钮</div>
+        <div class="jrm-button jrm-button-variable jrm-color-fff jrm-bg-color-02d397">大按钮颜色可变</div>
+        <div class="jrm-button jrm-button-variable jrm-disable jrm-color-fff jrm-bg-color-02d397">大按钮颜色可变</div>
+        <div class="jrm-button jrm-button-variable jrm-color-fff jrm-bg-color-508cee">您收到一个红包</div>
+        <div class="jrm-unfold-button"></div>
+        <div class="jrm-unfold-button jrm-unfold-button-rotate"></div>
+
     </div>
     <div class="page__ft">
         <a href="javascript:home()"><img src="./images/icon_footer_link.png" /></a>
     </div>
+
+
 </div>
 
 </script>
-    
+    <script type="text/html" id="tpl_confirm">
+<div class="page">
+    <div class="page__hd">
+        <h1 class="page__title">confirm</h1>
+        <p class="page__desc">对话框</p>
+    </div>
+    <div class="page__bd page__bd_spacing">
+
+        <button class="xfy-btn" data-type="confirm">confirm</button>
+        <button class="xfy-btn" data-type="alert">alert</button>
+        <button class="xfy-btn" data-type="vertical">vertical</button>
+
+
+    </div>
+    <div class="page__ft">
+        <a href="javascript:home()"><img src="./images/icon_footer_link.png" /></a>
+    </div>
+
+
+</div>
+<script>
+    $(function(){
+        $('.xfy-btn').click(function(){
+            var type=$(this).data('type');
+
+            switch(type){
+                case 'confirm':
+
+                    $('body').xfyConfirm({
+
+                    type:type,
+                        title:'confirm',
+                        cancelCallback:function(){
+                            alert('confirm取消回调');
+                        },
+                        sureCallback:function(){
+                            alert('confirm确定回调');
+                        }
+                    });
+                    alert(type);
+
+                    break;
+                case'alert':
+                    $('body').xfyConfirm({
+                        type:type,
+                        title:'alert',
+                        sureCallback:function(){
+                            alert('alert');
+                        }
+                    });
+                    break;
+                case 'vertical':
+                    $('body').xfyConfirm({
+                        type:type,
+                        title:'vertical',
+                        cancelCallback:function(){
+                            alert('vertical取消');
+                        },
+                        sureCallback:function(){
+                            alert('vertical确定');
+                        }
+                    });
+                    break;
+            }
+
+
+        });
+
+    });
+</script>
+</script>
+    <script type="text/html" id="tpl_tab">
+<div class="page">
+    <div class="page__hd">
+        <h1 class="page__title">tab</h1>
+        <p class="page__desc">标签</p>
+    </div>
+    <div class="page__bd page__bd_spacing">
+
+        <div class="xfy-text">一般tab样式</div>
+        <section>
+            <ul class="xfy-row">
+                <li class="xfy-tab xfy-border-1px xfy-border-bottom xfy-active ">标签1</li>
+                <li class="xfy-tab xfy-border-1px xfy-border-bottom xfy-border-left">标签2</li>
+            </ul>
+            <div class="tab-contents">
+                <div class="item-content" style="display: block">
+                    <p>1</p>
+                </div>
+                <div class="item-content">
+                    <p>2</p>
+                </div>
+            </div>
+
+        </section>
+
+        <div class="xfy-text">2-4tab样式</div>
+        <section>
+            <ul class="xfy-row">
+                <li class="xfy-tab xfy-border-1px xfy-border-bottom xfy-active ">标签1</li>
+                <li class="xfy-tab xfy-border-1px xfy-border-bottom ">标签2</li>
+                <li class="xfy-tab xfy-border-1px xfy-border-bottom ">标签3</li>
+                <li class="xfy-tab xfy-border-1px xfy-border-bottom ">标签4</li>
+            </ul>
+            <div class="tab-contents">
+                <div class="item-content" style="display: block">
+                    <p> 1</p>
+                </div>
+                <div class="item-content">
+                    <p> 2</p>
+                </div>
+                <div class="item-content" >
+                    <p> 3</p>
+                </div>
+                <div class="item-content">
+                    <p> 4</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="xfy-text">5个以上tab样式</div>
+        <section>
+            <ul class="xfy-row xfy-row-5">
+                <li class="xfy-tab xfy-border-1px xfy-border-bottom xfy-active ">标签1</li>
+                <li class="xfy-tab xfy-border-1px xfy-border-bottom ">标签2</li>
+                <li class="xfy-tab xfy-border-1px xfy-border-bottom ">标签3</li>
+                <li class="xfy-tab xfy-border-1px xfy-border-bottom ">标签4</li>
+                <li class="xfy-tab xfy-border-1px xfy-border-bottom ">标签4</li>
+
+            </ul>
+            <div class="tab-contents">
+                <div class="item-content" style="display: block">
+                    <p> 1</p>
+                </div>
+                <div class="item-content">
+                    <p> 2</p>
+                </div>
+                <div class="item-content">
+                    <p> 3</p>
+                </div>
+                <div class="item-content">
+                    <p> 4</p>
+                </div>
+                <div class="item-content">
+                    <p> 5</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="xfy-text">特殊80tab样式</div>
+        <section>
+            <ul class="xfy-row xfy-row-80">
+                <li class="xfy-tab xfy-border-1px xfy-border-bottom xfy-active ">标签1</li>
+                <li class="xfy-tab xfy-border-1px xfy-border-bottom ">标签2</li>
+            </ul>
+            <div class="tab-contents">
+                <div class="item-content" style="display: block">
+                    <p> 1</p>
+                </div>
+                <div class="item-content">
+                    <p> 2</p>
+                </div>
+
+            </div>
+        </section>
+        <section>
+            <ul class="xfy-row xfy-row-80">
+                <li class="xfy-tab xfy-border-1px xfy-border-bottom xfy-active xfy-border-right ">标签1</li>
+                <li class="xfy-tab xfy-border-1px xfy-border-bottom xfy-border-right">标签2</li>
+                <li class="xfy-tab xfy-border-1px xfy-border-bottom ">标签3</li>
+                <li class="xfy-tab xfy-border-1px xfy-border-bottom xfy-border-left">标签4</li>
+            </ul>
+            <div class="tab-contents">
+                <div class="item-content" style="display: block">
+                    <p> 1</p>
+                </div>
+                <div class="item-content">
+                    <p> 2</p>
+                </div>
+                <div class="item-content" >
+                    <p> 31</p>
+                </div>
+                <div class="item-content">
+                    <p> 42</p>
+                </div>
+            </div>
+        </section>
+
+
+    </div>
+    <div class="page__ft">
+        <a href="javascript:home()"><img src="./images/icon_footer_link.png" /></a>
+    </div>
+
+
+</div>
+</script>
+
     <script src="./zepto.min.js"></script>
     <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
     <script src="https://res.wx.qq.com/open/libs/weuijs/1.0.0/weui.min.js"></script>

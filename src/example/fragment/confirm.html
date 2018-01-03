@@ -1,0 +1,69 @@
+<div class="page">
+    <div class="page__hd">
+        <h1 class="page__title">confirm</h1>
+        <p class="page__desc">对话框</p>
+    </div>
+    <div class="page__bd page__bd_spacing">
+
+        <button class="xfy-btn" data-type="confirm">confirm</button>
+        <button class="xfy-btn" data-type="alert">alert</button>
+        <button class="xfy-btn" data-type="vertical">vertical</button>
+
+
+    </div>
+    <div class="page__ft">
+        <a href="javascript:home()"><img src="./images/icon_footer_link.png" /></a>
+    </div>
+
+
+</div>
+<script>
+    $(function(){
+        $('.xfy-btn').click(function(){
+            var type=$(this).data('type');
+
+            switch(type){
+                case 'confirm':
+
+                    $('body').xfyConfirm({
+
+                    type:type,
+                        title:'confirm',
+                        cancelCallback:function(){
+                            alert('confirm取消回调');
+                        },
+                        sureCallback:function(){
+                            alert('confirm确定回调');
+                        }
+                    });
+                    alert(type);
+
+                    break;
+                case'alert':
+                    $('body').xfyConfirm({
+                        type:type,
+                        title:'alert',
+                        sureCallback:function(){
+                            alert('alert');
+                        }
+                    });
+                    break;
+                case 'vertical':
+                    $('body').xfyConfirm({
+                        type:type,
+                        title:'vertical',
+                        cancelCallback:function(){
+                            alert('vertical取消');
+                        },
+                        sureCallback:function(){
+                            alert('vertical确定');
+                        }
+                    });
+                    break;
+            }
+
+
+        });
+
+    });
+</script>
